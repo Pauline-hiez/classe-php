@@ -50,6 +50,17 @@ class Userpdo
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($data && password_verify($password, $data['password'])) {
             $this->id = $data['id'];
+            $this->login = $data['login'];
+            $this->email = $data['email'];
+            $this->firstname = $data['firstname'];
+            $this->lastname = $data['lastname'];
+            $this->connected = true;
+            return true;
         }
+
+        $this->connected = false;
+        return false;
     }
+
+    // Déconnexion
 }
