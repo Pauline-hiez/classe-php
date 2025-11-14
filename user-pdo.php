@@ -63,4 +63,15 @@ class Userpdo
     }
 
     // Déconnexion
+    public function disconnect()
+    {
+        $this->id = null;
+        $this->login = null;
+        $this->email = null;
+        $this->firstname = null;
+        $this->lastname = null;
+    }
+
+    // Supprime un utilisateur
+    public function delete() {}
 }

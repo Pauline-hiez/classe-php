@@ -3,7 +3,7 @@
 require_once "helpers.php";
 
 // Création de la classe User
-class User
+class Users
 {
     private $id;
     public $login;
@@ -177,6 +177,6 @@ class User
 }
 
 $connexion = mysqli_connect("localhost", "root", "", "classes");
-$u1 = new User($connexion);
+$u1 = new Users($connexion);
 $u1->register("Pops", "Mdp", "pauline@plateforme.io", "Pauline", "Hiez");
-echo "Bonjour " . $u1->firstname . "!";
+echo "Bonjour " . $u1->firstname . " !";
